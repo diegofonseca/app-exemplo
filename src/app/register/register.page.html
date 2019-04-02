@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>Registrar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item text-center>
+    <ion-label>
+      <ion-icon name="aperture" class="logo"></ion-icon>
+    </ion-label>
+  </ion-item>
+
+  <h1>Meu aplicativo</h1>
+  <h6>Crie seu cadastro.</h6>
+
+  <ion-grid>
+    <ion-row class="inputStyle">
+      <ion-icon name="person"></ion-icon>
+      <ion-input type="text"></ion-input>
+    </ion-row>
+    <ion-row class="inputStyle">
+      <ion-icon name="mail"></ion-icon>
+      <ion-input type="email"></ion-input>
+    </ion-row>
+    <ion-row class="inputStyle">
+      <ion-icon name="key"></ion-icon>
+      <ion-input type="password"></ion-input>
+    </ion-row>
+  </ion-grid>
+
+  <ion-button 
+      expand="block"
+      shape="round"
+      fill="outline"
+      style="margin-top: 20px"
+      color="light">Registrar</ion-button>
+
+      <ion-button 
+          expand="block"
+          shape="round"
+          fill="outline"
+          style="margin-top: 20px"
+          routerLink="/login"
+          color="light">Já tenho cadastro</ion-button>
+</ion-content>
