@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthSeviceService } from '../services/auth-sevice.service';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+
+  constructor(private authService:AuthSeviceService) {}
+
+  logout() {
+    this.authService.logout();
+  }
 
 }
