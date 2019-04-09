@@ -17,15 +17,15 @@
   <ion-grid>
     <ion-row class="inputStyle">
       <ion-icon name="person"></ion-icon>
-      <ion-input type="text"></ion-input>
+      <ion-input type="text" [(ngModel)]="displayname"></ion-input>
     </ion-row>
     <ion-row class="inputStyle">
       <ion-icon name="mail"></ion-icon>
-      <ion-input type="email"></ion-input>
+      <ion-input type="email" [(ngModel)]="email"></ion-input>
     </ion-row>
     <ion-row class="inputStyle">
       <ion-icon name="key"></ion-icon>
-      <ion-input type="password"></ion-input>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
     </ion-row>
   </ion-grid>
 
@@ -34,6 +34,7 @@
       shape="round"
       fill="outline"
       style="margin-top: 20px"
+      (click)="register()"
       color="light">Registrar</ion-button>
 
       <ion-button 
