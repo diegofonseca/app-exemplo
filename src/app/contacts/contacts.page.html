@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>contacts</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-input [(ngModel)]="contact.nome" placeholder="Nome"></ion-input>
+
+  <ion-input [(ngModel)]="contact.telefone" placeholder="Telefone"></ion-input>
+
+  <ion-button (click)="add()">Salvar</ion-button> 
+  
+  <ion-button *ngIf="contactId" color="danger" (click)="remove()">Remover</ion-button>
+
+</ion-content>
