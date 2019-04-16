@@ -13,7 +13,6 @@ export class ContactsService {
 
   constructor(private db:AngularFirestore) { 
     this.contactsCollection = db.collection<ContactI>('contacts');
-    //this.contacts = this.contactsCollection.valueChanges();
     this.contacts = this.contactsCollection.snapshotChanges().pipe(map(
       actions => {
         return actions.map(a => {

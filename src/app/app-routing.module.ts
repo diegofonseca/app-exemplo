@@ -23,7 +23,9 @@ const routes: Routes = [
     loadChildren: './login/login.module#LoginPageModule',
     canActivate: [LoginGuard]
   },
-  { path: 'register', loadChildren: './register/register.module#RegisterPageModule' }
+  { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
+  { path: 'contacts', loadChildren: './contacts/contacts.module#ContactsPageModule' },
+  { path: 'contacts/:id', loadChildren: './contacts/contacts.module#ContactsPageModule' },
 ];
 
 @NgModule({
