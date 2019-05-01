@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['list.page.scss']
 })
 export class ListPage implements OnInit {
+
+  tela = 1;
+
+
   private selectedItem: any;
   private icons = [
     'flask',
@@ -28,6 +32,14 @@ export class ListPage implements OnInit {
         icon: this.icons[Math.floor(Math.random() * this.icons.length)]
       });
     }
+  }
+
+  proximo() {
+    this.tela = this.tela + 1;
+  }
+
+  anterior() {
+    this.tela = this.tela - 1;
   }
 
   ngOnInit() {
