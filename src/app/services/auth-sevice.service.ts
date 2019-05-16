@@ -17,6 +17,10 @@ export class AuthSeviceService {
     this.router.navigate(['/login']);
   }
 
+  getEmail() {
+    return this.AFAuth.auth.currentUser.email;
+  }
+
   register(displayname: string, email: string, password: string) {
     return this.AFAuth.auth.createUserWithEmailAndPassword(email, password).then(res => {
       res.user.updateProfile({displayName: displayname});

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ContactI } from '../model/contact.interface';
 import { ContactsService } from '../services/contacts.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AuthSeviceService } from '../services/auth-sevice.service';
 
 @Component({
   selector: 'app-contacts',
@@ -16,8 +17,11 @@ export class ContactsPage implements OnInit {
   }
   contactId = null;
 
+  user:string;
+
   constructor(
     private route: ActivatedRoute,
+    private authService:AuthSeviceService,
     private contactService:ContactsService, 
     private router: Router) { }
 
@@ -28,6 +32,8 @@ export class ContactsPage implements OnInit {
         this.contact = res;
       })
     }
+
+    this.user = this.authService.getEmail();
   }
 
   add() {
