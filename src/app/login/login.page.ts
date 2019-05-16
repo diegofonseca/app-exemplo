@@ -25,4 +25,12 @@ export class LoginPage implements OnInit {
     });
   }
 
+  loginWithGoogle() {
+    this.authService.loginWithGoogle().then(res => {
+      this.router.navigate(['/home']);
+    }).catch(error => {
+      alert('Acesso não autorizado.');
+    });
+  }
+
 }
